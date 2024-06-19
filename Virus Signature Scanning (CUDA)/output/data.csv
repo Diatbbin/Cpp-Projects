@@ -1,0 +1,28 @@
+,,,,,,,,
+"Table A: Vary number of input files (with virus-0017, signatures/sigs-both.txt)",,,,,,,,
+number of input files,speedup,runtime,Ratio of the speedup in the current row to the speedup in the previous row ,,,Table E: Speedup of shared memory vs non-shared using all the given input files and sigs-both.txt,,
+5,54.675,486.3ms vs 26.590s,,,,Shared memory,75.6,
+10,65.832,810.3ms vs 53.345s,1.2,,,Non-shared memory,80.9,
+20,91.259,1.166s vs 106.372s,1.39,,,,,
+40,103.757,2.056s vs 213.279s,1.14,,,Table F: Speedup of shared memory vs non-shared using different number of signatures,,
+,,,,,,,"10,000 signatures","20,000 signatures"
+Table B: Vary size of input files used (with signatures/sigs-both.txt),,,,,,Shared memory,94.3,96.4
+file used (10 of the same file used),speedup,runtime,Ratio of the speedup in the current row to the speedup in the previous row ,,,Non-shared memory,100.1,102.3
+virus-0004 (359KB),42.274,415.6ms vs 17.569s,,,,,,
+virus-0013 (792KB),65.314,573.8ms vs 37.474s,1.55,,,Table G: Speedup of shared memory vs non-shared using different signature lengths,,
+virus-0012 (1.5MB),82.752,842.8ms vs 69.742s,1.27,,,,Length 200 signatures,Length 400 signatures
+virus-0011 (2.7MB),97.032,1.283s vs 124.467s,1.17,,,Shared memory,78.7,77.9
+,,,,,,Non-shared memory,83.2,82.5
+Table C: Vary number of signatures,,,,,,,,
+number of signatures,speedup,runtime,Ratio of the speedup in the current row to the speedup in the previous row ,,,,,
+2.5k,73.988,733.4ms vs 54.624s,,,,,,
+5k,91.577,1.191s vs 109.051s,1.2,,,,,
+10k,100.156,2.165s vs 216.857s,1.09,,,,,
+20k,106.862,4.061s vs 433.929s,1.06,,,,,
+,,,,,,,,
+Table D: Vary signature lengths,,,,,,,,
+signatures length (5k sigs),speedup,runtime,Ratio of the speedup in the current row to the speedup in the previous row ,,,,,
+50,91.446,1.192s vs 109.011s,,,,,,
+100,89.105,1.244s vs 109.068s,0.97,,,,,
+200,82.198,1.320s vs 108.496s,0.92,,,,,
+400,74.022,1.473s vs 109.007s,0.9,,,,,

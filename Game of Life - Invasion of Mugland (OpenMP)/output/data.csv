@@ -1,0 +1,35 @@
+,,,,,,,,
+,,,,"Table A: Vary number of rows, nCols = 60, nGenerations = 1000000",,,,
+Number of threads,Critical,Reduction,,Number of rows,"Time(1, 8, 16 threads)",Speedup with 8 threads,Speedup with 16 threads,"MIPS(1, 8, 16 threads)"
+4,69.8,68.9,,16,"71.7, 16.0, 16.0",4.48,4.48,"4156.6, 19319.3, 19804.3"
+8,44,45.3,,32,"152.5, 28.4, 28.3",5.37,5.39,"3,905.1, 21650.0, 22201.3"
+16,41.1,42.7,,64,"282.3, 51.3, 47.1",5.5,5.99,"4,220.3, 23907.3, 26465.8"
+,,,,80,"355.8, 63.9, 56.6",5.57,6.29,"4183.7, 23986.8, 27497.6"
+With reduction,,,,,,,,
+Number of threads,static,dynamic,,"Table B: Vary number of columns, nRows = 50, nGenerations = 1000000",,,,
+4,70.8,71.1,,Number of columns,"Time(1, 8, 16 threads)",Speedup with 8 threads,Speedup with 16 threads,"MIPS(1, 8, 16 threads)"
+8,44.8,47.7,,16,"62.1, 16.9, 20.0",3.67,3.11,"4282.2, 16438.3, 14521.0"
+16,42.1,44.6,,32,"120.3, 25.3, 25.7",4.75,4.68,"4218.8, 20768.3, 21041.8"
+,,,,64,"236.3, 44.3, 41.5",5.33,5.69,"4196.3, 23035.0, 25073.4"
+"With reduction, 8 threads",,,,80,"296.2, 53.6, 47.7",5.53,6.21,"4169.7, 23716.8, 27018.8"
+Chunk size,static,dynamic,,,,,,
+3,56.8,57.8,,"Table C: Vary number of generations, nRows = 50, nCols = 60",,,,
+5,58.6,60.5,,Number of generations,"Time(1, 8, 16 threads)",Speedup with 8 threads,Speedup with 16 threads,"MIPS(1, 8, 16 threads)"
+10,59.3,61,,10000,"2.42, 0.597, 0.568",4.05,4.26,"4346.5, 18121.6, 19335.4"
+,,,,100000,"22.6, 4.34, 4.01",5.21,5.64,"4174.2, 22326.3, 24267.9"
+,,,,1000000,"223.1, 41.3, 38.2",5.4,5.84,"4173, 23242.7, 25576.3"
+,,,,,,,,
+,,,,"Table D: Collapse directive optimisation, vary nRows, nCols=60, nGenerations=1000000",,,,
+,,,,Number of Rows,10 threads no collapse,10 threads with collapse,16 threads no collapse,16 threads with collapse
+,,,,30,25.1,24.4,26.2,24.2
+,,,,40,31.9,31.4,35.5,31
+,,,,50,37.9,38,42.7,37
+,,,,32,30.9,26.1,29.1,28.3
+,,,,64,50.1,45.7,46.9,47.1
+,,,,80,58.2,56.1,56.3,56.6
+,,,,,,,,
+,,,,"Table E: Vary number of threads, nRows = 50, nCols = 60, nGenerations = 1000000",,,,
+,,,,Number of threads,Task Clock,Context Switches,,
+,,,,1,282796.3,715,,
+,,,,8,406961.6,653,,
+,,,,16,730038.8,1668,,
