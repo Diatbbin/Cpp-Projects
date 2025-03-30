@@ -1,4 +1,4 @@
-# Parallel-Programming-Projects
+# C++ Projects
 
 Project 1: Game of Life - Invasion of Mugland
 
