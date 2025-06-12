@@ -11,3 +11,7 @@ Parallelizing pattern matching algorithms to detect viruses in a file on GPGPU u
 Project 3: Distributed Task Runner
 
 Implemented a distributed task runner for a fixed set of tasks on a network of machines using MPI
+
+Project 4: Orders Matching Engine
+
+Implemented a high-concurrency order matching engine supporting buy/sell operations, order cancellation
